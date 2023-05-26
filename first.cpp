@@ -32,5 +32,5 @@ int rand_n (int min, int max){ //input: 2 integers, output: 1 random integer, bi
 }
 
 int main(){
-
+int a;
 }
