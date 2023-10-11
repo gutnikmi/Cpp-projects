@@ -4,11 +4,18 @@
 
 #ifndef CPP_PROJECTS_SORT_H
 #define CPP_PROJECTS_SORT_H
+class Sorter{
+public:
 
 void merge(int A[],int p, int r, int q);
 
-void Sort(int A[], int p, int r);
+void Sort_m(int A[], int p, int r);
 
-int test_merge_sort();
+private:
+
+};
+
+
+int test_merge_sort_m();
 
 #endif //CPP_PROJECTS_SORT_H

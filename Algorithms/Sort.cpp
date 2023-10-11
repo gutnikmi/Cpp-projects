@@ -4,19 +4,19 @@ using namespace std;
 
 
 
-void Sort(int A[], int p, int r)
+void Sorter::Sort_m(int A[], int p, int r)
 {
     int q;
     if (p < r){
 
         q=(p+r)/2;
-        Sort(A, p, q);
-        Sort(A, q+1, r);
+        Sort_m(A, p, q);
+        Sort_m(A, q+1, r);
         merge(A,p,r,q);
     }
 }
 
-void merge(int A[],int p, int r, int q)
+void Sorter::merge(int A[],int p, int r, int q)
 {
     int mergedList[8];
     int i, j, k;
@@ -54,7 +54,7 @@ void merge(int A[],int p, int r, int q)
     }
 }
 
-int test_merge_sort()
+int test_merge_sort_m()
 {
     int A[8]={5,2,4,6,1,3,2,6};
     int length = (sizeof(A)/sizeof(*A));
@@ -63,10 +63,12 @@ int test_merge_sort()
     {
         cout<<A[i]<<" ";
     }
-    Sort(A, 0, length-1);
-    cout<<"\n\nSorted array ... \n";
+    Sorter sort_obj;
+    sort_obj.Sort_m(A, 0, length-1);
+    cout<<"\n\nSort_med array ... \n";
     for (int i = 0; i < 8; i++)
     {
         cout<<A[i]<<" ";
     }
+    return 0;
 }

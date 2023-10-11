@@ -3,5 +3,6 @@
 
 int main(){
     //std::cout<<"hello world!";
-    test_merge_sort();
+    test_merge_sort_m();
+    return 0;
 }
