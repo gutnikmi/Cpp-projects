@@ -3,6 +3,6 @@
 
 int main(){
     //std::cout<<"hello world!";
-    test_merge_sort_m();
+    test_alg();
     return 0;
 }

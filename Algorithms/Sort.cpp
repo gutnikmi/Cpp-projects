@@ -4,19 +4,25 @@ using namespace std;
 
 
 
-void Sorter::Sort_m(int A[], int p, int r)
+Sorter::Sorter(Sorting *srt) : s(srt) {}
+
+Sorter::~Sorter(){delete s;}
+
+void Sorter::sort(int A[], int p, int r){s->sort( A, p, r);}
+
+void Merge_sort::sort(int A[], int p, int r)
 {
     int q;
     if (p < r){
 
         q=(p+r)/2;
-        Sort_m(A, p, q);
-        Sort_m(A, q+1, r);
+        sort(A, p, q);
+        sort(A, q+1, r);
         merge(A,p,r,q);
     }
 }
 
-void Sorter::merge(int A[],int p, int r, int q)
+void Merge_sort::merge(int A[],int p, int r, int q)
 {
     int mergedList[8];
     int i, j, k;
@@ -54,21 +60,19 @@ void Sorter::merge(int A[],int p, int r, int q)
     }
 }
 
-int test_merge_sort_m()
+int test_alg()
 {
     int A[8]={5,2,4,6,1,3,2,6};
     int length = (sizeof(A)/sizeof(*A));
     cout<<"Input array ...\n";
-    for (int i = 0; i < 8; i++)
-    {
-        cout<<A[i]<<" ";
-    }
-    Sorter sort_obj;
-    sort_obj.Sort_m(A, 0, length-1);
-    cout<<"\n\nSort_med array ... \n";
-    for (int i = 0; i < 8; i++)
-    {
-        cout<<A[i]<<" ";
-    }
+    for (int i: A)
+        cout << i << " ";
+
+    auto * s = new Sorter(new Merge_sort);
+    s->sort(A, 0, length-1);
+    cout<<"\n\nSorted array ... \n";
+    for (int i : A)
+        cout << i << " ";
+
     return 0;
 }
