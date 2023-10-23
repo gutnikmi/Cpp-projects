@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Cpp_projects
 #        main.cpp
+        Casts.cpp
 #        Containers.cpp
-
-        Constants.cpp
+#        Constants.cpp
         Constants.h
 )

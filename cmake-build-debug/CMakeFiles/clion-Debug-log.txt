@@ -1,0 +1,4 @@
+F:\Programs\Clion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S F:\Programs\Git\Cpp-projects -B F:\Programs\Git\Cpp-projects\cmake-build-debug
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/Programs/Git/Cpp-projects/cmake-build-debug

@@ -1,8 +1,9 @@
 #include<iostream>
-#include "Constants.cpp"
+#include "Constants.h"
+
+
 
 int main()
 {
-    test();
     return 0;
 }
